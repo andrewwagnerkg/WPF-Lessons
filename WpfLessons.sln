@@ -9,6 +9,8 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Tests", "Tests", "{788229B4
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WpfLessonsConsole", "Tests\WpfLessonsConsole\WpfLessonsConsole.csproj", "{A9D8FFF2-E564-4A61-9DEA-44CB75D7BB59}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WpfLessonsWpfTestProject", "Tests\WpfLessonsWpfTestProject\WpfLessonsWpfTestProject.csproj", "{DCC5E542-EF4D-459E-A766-5FE30777230D}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -23,12 +25,17 @@ Global
 		{A9D8FFF2-E564-4A61-9DEA-44CB75D7BB59}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{A9D8FFF2-E564-4A61-9DEA-44CB75D7BB59}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{A9D8FFF2-E564-4A61-9DEA-44CB75D7BB59}.Release|Any CPU.Build.0 = Release|Any CPU
+		{DCC5E542-EF4D-459E-A766-5FE30777230D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{DCC5E542-EF4D-459E-A766-5FE30777230D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{DCC5E542-EF4D-459E-A766-5FE30777230D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{DCC5E542-EF4D-459E-A766-5FE30777230D}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
 	EndGlobalSection
 	GlobalSection(NestedProjects) = preSolution
 		{A9D8FFF2-E564-4A61-9DEA-44CB75D7BB59} = {788229B4-E509-4723-A3AF-B73F3EE89B17}
+		{DCC5E542-EF4D-459E-A766-5FE30777230D} = {788229B4-E509-4723-A3AF-B73F3EE89B17}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {38A8FDA9-1C96-46C3-AC35-0989317C76F9}
