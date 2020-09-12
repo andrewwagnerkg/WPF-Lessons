@@ -5,11 +5,71 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:l="clr-namespace:WpfLessons"
         xmlns:vm="clr-namespace:WpfLessons.ViewModels"
-        Title="MainWindow" Height="450" Width="800">
+        Title="{Binding Title}" Height="450" Width="800">
     <Window.DataContext>
         <vm:MainWindowViewModel/>
     </Window.DataContext>
-    <Grid>
-
-    </Grid>
+    <DockPanel>
+        <Menu DockPanel.Dock="Top">
+            <MenuItem>
+                <MenuItem.Header>
+                    File
+                </MenuItem.Header>
+                <MenuItem>
+                    <MenuItem.Header>
+                        Exit
+                    </MenuItem.Header>
+                </MenuItem>
+            </MenuItem>
+            <MenuItem>
+                <MenuItem.Header>
+                    About
+                </MenuItem.Header>
+            </MenuItem>
+        </Menu>
+        <StatusBar DockPanel.Dock="Bottom">
+            <Grid>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="*"/>
+                    <ColumnDefinition Width="*"/>
+                </Grid.ColumnDefinitions>
+                <TextBlock Text="{Binding Status}" 
+                           Grid.Column="0"/>
+                <Grid Grid.Column="1">
+                    <ProgressBar Value="{Binding Propgress}"
+                             Minimum="0"
+                             Maximum="100"
+                             Width="300">
+                    </ProgressBar>
+                    <TextBlock Text="{Binding Propgress, StringFormat={}{0:0}%}"
+                               VerticalAlignment="Center"
+                               HorizontalAlignment="Center"/>
+                </Grid>
+            </Grid>
+        </StatusBar>
+        <TabControl>
+            <TabItem>
+                <TabItem.Header>
+                    <TextBlock Text="Tab 1"/>
+                </TabItem.Header>
+                <StackPanel Orientation="Horizontal">
+                    <Slider Value="{Binding Propgress}" 
+                        Width="120"
+                        Minimum="0"
+                        Maximum="100"
+                        />
+                    <TextBox Text="{Binding Status, 
+                        UpdateSourceTrigger=PropertyChanged, 
+                        NotifyOnSourceUpdated=True}"
+                             Width="300"
+                             Height="300"/>
+                </StackPanel>
+            </TabItem>
+            <TabItem>
+                <TabItem.Header>
+                    <TextBlock Text="Tab 2"/>
+                </TabItem.Header>
+            </TabItem>
+        </TabControl>
+    </DockPanel>
 </Window>
