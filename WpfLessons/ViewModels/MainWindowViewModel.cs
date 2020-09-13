@@ -7,11 +7,11 @@ namespace WpfLessons.ViewModels
         private string _Title="Test";
         public string Title { get=>_Title; set=>Set(ref _Title,value); }
 
-        private string _Status;
+        private string _Status="ОК";
         public string Status{get => _Status; set => Set(ref _Status, value);}
 
         private double _Progress;
-        public double Propgress { get=>_Progress; set=>Set(ref _Progress,value); }
+        public double Progress { get=>_Progress; set=>Set(ref _Progress,value); }
 
     }
 }
