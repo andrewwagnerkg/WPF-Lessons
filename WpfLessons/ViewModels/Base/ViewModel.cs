@@ -1,11 +1,18 @@
 ﻿using System.ComponentModel;
 using System.Runtime.CompilerServices;
+using System.Windows.Input;
 using WpfLessons.Annotations;
+using WpfLessons.Infrastructure.Commands.Commons;
 
 namespace WpfLessons.ViewModels.Base
 {
     internal abstract class ViewModel : INotifyPropertyChanged
     {
+        protected ViewModel()
+        {
+            CloseApplicationCommand = new CloseApplicationCommand();
+        }
+
         public event PropertyChangedEventHandler PropertyChanged;
 
         [NotifyPropertyChangedInvocator]
@@ -21,5 +28,9 @@ namespace WpfLessons.ViewModels.Base
             OnPropertyChanged(propertyName);
             return true;
         }
+
+        public ICommand CloseApplicationCommand { get; set; }
+
+
     }
 }
